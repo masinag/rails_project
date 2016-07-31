@@ -1,0 +1,40 @@
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--12-col">
+    <p id="notice"><%= notice %></p>
+  </div>
+
+  <div class="mdl-cell mdl-cell--12-col">
+    <h1>Listing Activities</h1>
+  </div>
+
+    <% @activities.each do |activity| %>
+      <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-card">
+
+        <div class="mdl-card mdl-shadow--2dp">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text"><%= activity.title %></h2>
+          </div>
+          <div class="mdl-card__supporting-text">
+            <%= activity.description %>
+            <br>
+            <%= activity.category %>
+          </div>
+          <div class="mdl-card__actions">
+              <%= link_to 'Show', activity, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"%>
+              <%= link_to 'Edit', edit_activity_path(activity), :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" %>
+              <%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' }, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
+          </div>
+        </div>
+      </div>
+
+
+    <% end %>
+
+    <br>
+</div>
+
+<%= link_to new_activity_path, :class => "bottom-right-fixed" do%>
+  <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+    <i class="material-icons">add</i>
+  </button>
+<% end %>

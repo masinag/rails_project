@@ -1,0 +1,30 @@
+// Place all the styles related to the Activities controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.logo{
+  color: #fff;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.logo a,
+.logo a:visited,
+.logo a:hover {
+  color: #fff;
+  text-transform: none;
+  text-decoration: none;
+}
+
+.page-content {
+  max-width: 1050px;
+  margin:auto;
+}
+
+.bottom-right-fixed {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 9;
+}
